@@ -7,3 +7,5 @@ xgboost
 shap
 google-generativeai
 python-dotenv
+fpdf
+fpdf2
