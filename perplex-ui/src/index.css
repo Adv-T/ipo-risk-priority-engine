@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grad: radial-gradient(1200px 800px at 80% -10%, rgba(96,165,250,0.25), transparent 50%),
+           radial-gradient(900px 600px at -10% 60%, rgba(34,197,94,0.18), transparent 50%),
+           linear-gradient(180deg, #0a0f1e 0%, #0e152b 60%, #0b1220 100%);
+}
+
+html, body, #root { height: 100%; }
+body {
+  @apply text-white antialiased;
+  background-image: var(--grad);
+  background-attachment: fixed;
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/15 shadow-glass rounded-2xl;
+}
+
+.link-card {
+  @apply glass p-8 hover:bg-white/15 transition;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 glass px-4 py-2 hover:bg-white/15;
+}
+
+.input-glass {
+  @apply glass px-4 py-3 focus:outline-none placeholder-white/50;
+}
+
+
